@@ -1,0 +1,30 @@
+Methodology
+•	 AutoDock includes 3 steps: 
+•	 Protein preparation
+•	 Ligand preparation 
+•	Grid generation
+•	 Defining the docking parameters 
+•	To run the docking
+•	1. Protein  preparation:-
+  We choose our desired protein of  interest  from the PDB and download its .pdb format  in the docking folder. Then we open it in the Autodock and read the protein molecule and check if there are any hetero atoms or unsaturated molecules present in the protein if yes we delete all other molecules and only keep the amino acids .
+•	Then we add hydrogens polar only 
+•	We give charges 
+•	Assign AD4 type atom
+•	Now are protein is prepared and now we save it as protein.pdbqt format
+
+	2. Ligand Preparation :
+•	We choose our desired ligand of  interest  from the PDB and download its .pdb format  in the docking folder. Then we open it in the Autodock and read the ligand molecule 
+•	Add hydrogens: Edit → Hydrogens →Add polar only → Ok
+•	 Give Charges: > Edit → charges → Gasteiger charge → Ok
+•	 Define torsions: >Ligand →Torsion tree → Choose torsion → Done >Ligand → Torsion tree →Set no. of torsion → Done
+•	 • Save File: >Ligand → Out put → Save as PDBQT → save → Ok >Edit → Delete →Delete all molecule → Continue.
+
+
+3. Running AutoGrid calculation:-
+ The purpose of this section is to define the search grid and produce grid maps used later by Autodock.
+Grid box is generated as per the steps given in the manual . Grid box is generated so as to make an boundary area around the active side of thr protein and coverthe ligand too. The grid box set the boundary of the docking.
+4. Preparing the Docking Parameter File (.dpf):- as per the manual steps
+The docking parameter file tells AutoDock which map files to use, the ligand molecule to move, what its center and number of torsions are, where to start the ligand, the flexible residues to move if sidechain motion in the receptor is to be modeled.
+5. Running AutoDock:first we run the autogrid and then the autodock 
+6. Viewing Docking Results:- • The first step is to Read the docking log file (.dlg) • Analyze → Dockings → Open → [choose L.dlg]. • Analyse → Macromolecule → Open • Analyze → Conformations → Load → [double-click on each conformation to view it on screen]. • Analyse → Docking → Show the interaction. OR • Analyze → Conformations → Play... 
+The docking results consist of the PDBQT of the Cartesian coordinates of the atoms in the docked molecule, along with the state variables that describe this docked conformation and position.
